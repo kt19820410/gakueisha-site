@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPP 学習計画作成ツール｜学栄社</title>
+<meta name="description" content="教材と期間を入れるだけで1日単位の宿題スケジュールを自動作成。Excelで動く、個人塾のための買い切り型学習計画ツールSPP（Study Planner Plus）。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:22px}
+.pills span{background:var(--card);border:2px solid var(--c);color:var(--c);border-radius:999px;padding:8px 6px;text-align:center;font-weight:700;font-size:.8rem;line-height:1.4;display:grid;place-items:center}
+.spp-vis{position:relative;padding-bottom:40px}
+.spp-vis > img{border-radius:var(--r)}
+.spp-vis .shot{position:absolute;right:-2%;bottom:0;width:44%}
+.oneday{display:grid;gap:28px;align-items:center}
+.oneday .shot{max-width:380px;margin:0 auto}
+@media (min-width:860px){.oneday{grid-template-columns:1fr 1.2fr}}
+</style>
+</head>
+<body class="p-spp" data-page="spp">
+<div id="hd"></div>
+
+<section class="s-hero">
+  <div class="wrap grid">
+    <div>
+      <span class="tag">個人塾のための 学習計画作成ツール</span>
+      <p class="name">SPP<small>Study Planner Plus</small></p>
+      <h1>教材と期間を入れるだけ。<br>宿題のスケジュールが<br><span class="mark">ボタンひとつ</span>で完成。</h1>
+      <p class="lead">宿題管理から面談の準備、毎日の進捗チェックまでを1本にまとめました。Excelで動く、月額なしの買い切り型です。</p>
+      <div class="pills"><span>宿題管理の効率UP</span><span>専用カリキュラムで差別化</span><span>テストまでの計画品質UP</span><span>面談の説得力UP</span></div>
+      <div class="btns"><a class="btn btn-main" href="#contact">資料を請求する <span class="arw">→</span></a><a class="btn btn-ghost" href="#how">使い方を見る</a></div>
+    </div>
+    <div class="spp-vis rv">
+      <img src="img/p07.jpg" alt="学習計画表を見ながら自習する中学生" width="900" height="649">
+      <figure class="shot"><img src="img/spp-graph.jpg" alt="目標と実際のペースを比べるグラフ" width="675" height="389"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Problem</p><h2 class="h2">宿題の管理、<br>先生の頭の中だけになっていませんか？</h2></div>
+    <div class="probs">
+      <article class="rv"><div class="ic" style="color:var(--c)"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 7h22v27H9z"/><path d="M14 14h12M14 20h12M14 26h7"/></svg></div><div><b>宿題の量と範囲を毎回手で決めている</b><span>生徒ごとに教材も進度も違うので、計画づくりに時間がかかる。</span></div></article>
+      <article class="rv"><div class="ic" style="color:var(--c)"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="20" cy="20" r="14"/><path d="M20 12v9l6 3"/></svg></div><div><b>テストまでに終わるか分からない</b><span>遅れに気づくのが直前になり、追い込みで何とかしている。</span></div></article>
+      <article class="rv"><div class="ic" style="color:var(--c)"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="14" cy="15" r="5"/><circle cx="27" cy="15" r="5"/><path d="M5 33c1-6 5-9 9-9s8 3 9 9M18 33c1-6 5-9 9-9s8 3 9 9"/></svg></div><div><b>面談で進み具合を見せられない</b><span>「頑張っています」以上の説明ができず、説得力が出ない。</span></div></article>
+      <article class="rv"><div class="ic" style="color:var(--c)"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="6" y="9" width="28" height="20" rx="3"/><path d="M14 34h12M20 29v5"/></svg></div><div><b>学習管理システムは高い・難しい</b><span>月額費用がかかり、講師に使い方を覚えてもらうのも大変。</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap oneday">
+    <figure class="shot rv"><img src="img/spp-oneday.jpg" alt="志望校合格までの学習計画を1日単位で作成する例" width="620" height="708"></figure>
+    <div class="rv">
+      <p class="eyebrow">Daily Plan</p>
+      <h2 class="h2">志望校までの学習計画を<br><em>「1日単位」</em>で個別に作成</h2>
+      <p class="lead">どのテキストを、いつ、どれくらいやるか。1日単位での管理を可能にしました。予定どおりにできなかった、これも追加したい。そんなよくある調整も、ボタンひとつで反映できます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="bg-c">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">How to Use</p><h2 class="h2">入力して、ボタンを押して、<br>印刷して配るだけ</h2></div>
+    <div class="zig">
+      <article class="rv">
+        <figure class="media shot"><img src="img/spp-editor.jpg" alt="SPPの編集画面" width="1300" height="461"></figure>
+        <div><p class="num">01</p><h3>宿題を組む編集画面</h3><p>科目・教材・範囲・ペースを入力して「自動割当て」ボタンを押すと、「やる日」と「量」がすべて自動で割り振られます。学期や講習の宿題計画を、生徒ごとにまとめて作れます。</p></div>
+      </article>
+      <article class="rv">
+        <figure class="media shot"><img src="img/spp-calendar.jpg" alt="カレンダー形式の学習計画表。日ごとの宿題が書かれている" width="596" height="386"></figure>
+        <div><p class="num">02</p><h3>生徒に配る学習計画表</h3><p>1日ごとの宿題がカレンダー形式でひと目でわかります。印刷して配るだけで、生徒と保護者に予定を共有できます。</p></div>
+      </article>
+      <article class="rv">
+        <figure class="media shot"><img src="img/spp-graph.jpg" alt="目標と実際のペースを比べるグラフ" width="675" height="389"></figure>
+        <div><p class="num">03</p><h3>進捗がわかるペースグラフ</h3><p>目標のペースと実際の進み具合をグラフで比較。どれくらい遅れていて、どう取り戻すかが見えるので、面談での説明にそのまま使えます。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Easy Start</p><h2 class="h2">新しいシステムを入れる<br>手間はいりません</h2></div>
+    <div class="cards3">
+      <div class="rv"><p class="n">01</p><b>Excelで動く</b><span>新しいシステムの導入やネット環境は不要です。</span></div>
+      <div class="rv"><p class="n">02</p><b>説明書なしで使える</b><span>シンプルな操作で、購入したその日から使えます。</span></div>
+      <div class="rv"><p class="n">03</p><b>買い切りで月額なし</b><span>1教室ごとの買い切りライセンスです。</span></div>
+    </div>
+    <div class="band rv" style="margin-top:40px">
+      <div class="ph"><img src="img/p04.jpg" alt="講師が生徒に学習計画表を見せて面談している様子" width="800" height="600"></div>
+      <div class="tx"><p class="eyebrow">Price</p><h2 class="h2" style="font-size:clamp(1.35rem,5vw,1.9rem)">1教室ごとの買い切りです</h2>
+        <p class="offer" style="margin-top:18px;border-width:2px"><span class="t">期間限定価格</span><span class="was">通常価格 <s>250,000円</s>（税抜）</span><span class="p">150,000<small>円 / 1教室（税抜）</small></span><span class="n">買い切り・月額費用なし（2027年1月31日お申し込み分まで）</span></p></div>
+    </div>
+  </div>
+</section>
+
+<div id="ct" data-subject="SPP資料請求" data-title="資料請求は<br>塾名と教室数を送るだけ" data-lead="SPPの資料と画面サンプルをお送りします。"></div>
+<div id="ft"></div>
+<script src="main.js"></script>
+</body>
+</html>
