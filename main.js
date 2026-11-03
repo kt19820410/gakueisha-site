@@ -6,13 +6,14 @@
     hd.outerHTML='<header class="top"><div class="wrap"><a class="logo" href="index.html"><span class="mk">学</span><span><b>株式会社学栄社</b><small>学習塾のための4つのサービス</small></span></a>'+
     '<button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false"><span></span></button>'+
     '<nav class="gnav">'+nav.map(function(n){return '<a href="'+n[0]+'"'+(n[3]===page?' aria-current="page"':'')+'><i style="background:'+n[2]+'"></i>'+n[1]+'</a>'}).join('')+
-    '<a class="cta" href="#contact">お問い合わせ</a></nav></div></header>';
+    '<a class="cta" href="contact.html">お問い合わせ</a></nav></div></header>';
   }
   var ct=document.getElementById('ct');
   if(ct){
     var subj=ct.getAttribute('data-subject')||'お問い合わせ';
     ct.outerHTML='<section class="contact" id="contact"><div class="wrap center"><p class="eyebrow">Contact</p><h2 class="h2">'+(ct.getAttribute('data-title')||'まずはお気軽にご相談ください')+'</h2>'+
     '<p class="lead">'+(ct.getAttribute('data-lead')||'塾名と、気になっていることを一言送っていただくだけで大丈夫です。')+'</p>'+
+    '<a class="btn" style="background:#fff;color:#1b2559;margin-top:28px;min-width:280px" href="contact.html'+(page!=='top'?'?s='+page:'')+'">フォームで問い合わせる <span class="arw">→</span></a><p class="hint" style="margin-top:10px;color:#c9d1f0;font-size:.82rem">LINE・メールでも受け付けています</p>'+
     '<div class="cbox" style="text-align:left"><div><p class="k">LINE</p><p class="addr">@899xhfgq</p><p class="hint">株式会社学栄社 問合せ窓口</p><p class="hint">いちばん早くお返事できます</p><a class="btn btn-line" href="https://line.me/R/ti/p/%40899xhfgq" target="_blank" rel="noopener">LINEで友だち追加</a></div>'+
     '<div><p class="k">MAIL</p><p class="addr" id="mail">gakueisha.co@gmail.com</p><p class="hint">件名に「'+subj+'」と入れてお送りください</p><a class="btn btn-ghost" style="background:none;color:#fff;border-color:rgba(255,255,255,.4)" href="mailto:gakueisha.co@gmail.com?subject='+encodeURIComponent(subj)+'">メールを送る</a><button class="copy" type="button" id="copy-mail">アドレスをコピー</button></div></div></div></section>';
   }
@@ -22,7 +23,7 @@
   }
   if(['hp','ast','spp','con'].indexOf(page)>-1){
     var fb=document.createElement('div');fb.className='fixbar';
-    fb.innerHTML='<a class="l" href="https://line.me/R/ti/p/%40899xhfgq" target="_blank" rel="noopener">LINEで相談</a><a class="c" href="#contact">'+(page==='ast'?'無料体験版':page==='spp'?'資料請求':'無料相談')+'</a>';
+    fb.innerHTML='<a class="l" href="https://line.me/R/ti/p/%40899xhfgq" target="_blank" rel="noopener">LINEで相談</a><a class="c" href="contact.html?s='+page+'">'+(page==='ast'?'無料体験版':page==='spp'?'資料請求':'無料相談')+'</a>';
     document.body.appendChild(fb);document.body.classList.add('has-fix');
     var tick=function(){var c=document.getElementById('contact');var y=scrollY;var nearC=c&&c.getBoundingClientRect().top<innerHeight;fb.classList.toggle('on',y>500&&!nearC)};
     addEventListener('scroll',tick,{passive:true});tick();

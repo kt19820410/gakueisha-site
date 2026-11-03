@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>お問い合わせ｜学栄社</title>
+<meta name="description" content="株式会社学栄社へのお問い合わせフォーム。塾専門ホームページリニューアル、AST、SPP、経営コンサルティングのご相談を受け付けています。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.form{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 18px;display:grid;gap:22px}
+.f{display:grid;gap:8px}
+.f > label,.f > .lb{font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:8px}
+.req,.opt{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px}
+.req{background:var(--hp);color:#fff}.opt{background:var(--soft2);color:var(--ink-soft)}
+.f input[type=text],.f input[type=email],.f input[type=tel],.f textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;min-height:50px}
+.f textarea{min-height:160px;resize:vertical;line-height:1.7}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(47,84,235,.15)}
+.f .note{font-size:.78rem;color:var(--muted)}
+.choices{display:grid;gap:8px}
+.choices label{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;font-size:.92rem;min-height:50px}
+.choices input{width:20px;height:20px;accent-color:var(--brand);flex:none}
+.choices label:has(input:checked){border-color:var(--brand);background:var(--soft2)}
+@media (min-width:640px){.choices.two{grid-template-columns:1fr 1fr}}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.agree{font-size:.86rem;background:var(--soft);border-radius:12px;padding:14px}
+.agree label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:700}
+.agree input{width:20px;height:20px;margin-top:3px;accent-color:var(--brand);flex:none}
+.agree p{margin-top:8px;color:var(--ink-soft);font-weight:400;font-size:.8rem;line-height:1.7}
+.submit{width:100%;min-height:56px;border:0;border-radius:999px;background:var(--brand);color:#fff;font:inherit;font-weight:700;font-size:1rem;cursor:pointer}
+.submit:disabled{opacity:.6;cursor:wait}
+.msg{display:none;border-radius:var(--r);padding:22px 20px;margin-top:28px}
+.msg.ok{background:var(--con-s);border:2px solid var(--con)}
+.msg.ng{background:var(--hp-s);border:2px solid var(--hp)}
+.msg h2{font-size:1.2rem;margin-bottom:8px}
+.alt{margin-top:28px;display:grid;gap:10px}
+@media (min-width:640px){.alt{grid-template-columns:1fr 1fr}}
+.alt a{display:grid;gap:2px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
+.alt b{font-size:.92rem}.alt span{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body data-page="contact">
+<div id="hd"></div>
+
+<section class="s-hero" style="padding-bottom:24px">
+  <div class="wrap" style="max-width:760px">
+    <span class="tag">お問い合わせ</span>
+    <h1>ご相談・お問い合わせ</h1>
+    <p class="lead">どのサービスについても、こちらのフォームから受け付けています。内容を確認し、原則2営業日以内にメールでご返信します。しつこい営業は一切しません。</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:760px">
+    <form class="form" id="cform" novalidate>
+      <div class="f"><label for="juku">塾名・会社名<span class="req">必須</span></label><input type="text" id="juku" name="juku" required autocomplete="organization" placeholder="例：〇〇個別指導塾"></div>
+      <div class="f"><label for="name">お名前<span class="req">必須</span></label><input type="text" id="name" name="name" required autocomplete="name" placeholder="例：山田 太郎"></div>
+      <div class="f"><label for="email">メールアドレス<span class="req">必須</span></label><input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="例：info@example.com"><p class="note">ご返信はこのアドレスにお送りします。</p></div>
+      <div class="f"><label for="tel">電話番号<span class="opt">任意</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="例：06-1234-5678"></div>
+      <div class="f"><span class="lb">ご興味のあるサービス<span class="opt">複数選択可</span></span>
+        <div class="choices two">
+          <label><input type="checkbox" name="service" value="塾専門ホームページリニューアル">塾専門ホームページリニューアル</label>
+          <label><input type="checkbox" name="service" value="AST（時間割作成）">AST（時間割作成）</label>
+          <label><input type="checkbox" name="service" value="SPP（学習計画作成）">SPP（学習計画作成）</label>
+          <label><input type="checkbox" name="service" value="経営コンサルティング">経営コンサルティング</label>
+        </div>
+      </div>
+      <div class="f"><label for="url">今のホームページのURL<span class="opt">任意</span></label><input type="text" id="url" name="url" inputmode="url" placeholder="例：https://www.example.com"><p class="note">ホームページのご相談の場合は、入れていただくと話が早く進みます。</p></div>
+      <div class="f"><label for="body">ご相談内容<span class="req">必須</span></label><textarea id="body" name="body" required placeholder="例：講習の案内をすぐ出せるホームページにしたい、ASTの体験版を使ってみたい など"></textarea></div>
+      <div class="hp-field" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="agree">
+        <label><input type="checkbox" id="agree" required>個人情報の取り扱いに同意する</label>
+        <p>ご入力いただいた情報は、お問い合わせへの回答とご連絡のためだけに使い、法令に基づく場合を除いて第三者に提供することはありません。</p>
+      </div>
+      <button class="submit" type="submit" id="send">送信する</button>
+    </form>
+
+    <div class="msg ok" id="ok" role="status"><h2>送信が完了しました</h2><p>お問い合わせありがとうございます。確認のメールを自動でお送りしました。内容を確認し、原則2営業日以内にご返信します。</p></div>
+    <div class="msg ng" id="ng" role="alert"><h2>送信できませんでした</h2><p>お手数ですが、時間をおいてもう一度お試しいただくか、下のLINE・メールからご連絡ください。</p></div>
+
+    <div class="alt">
+      <a href="https://line.me/R/ti/p/%40899xhfgq" target="_blank" rel="noopener"><b>LINEで問い合わせる</b><span>@899xhfgq（株式会社学栄社 問合せ窓口）</span></a>
+      <a href="mailto:gakueisha.co@gmail.com"><b>メールで問い合わせる</b><span>gakueisha.co@gmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<div id="ft"></div>
+<script src="main.js"></script>
+<script>
+// Googleフォーム受付用のURL（Apps Scriptを公開したあとに差し替え）
+var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwYuss7UibtUjlcGMIymP9cp93Mjo7Vr4VEwRhsJvBiyMAZrdtREf3dpkD4VCs9GpRbrA/exec';
+(function(){
+  var f=document.getElementById('cform'),btn=document.getElementById('send');
+  // ?s=ast のように来たら、サービスに最初からチェック
+  var map={hp:0,ast:1,spp:2,con:3},s=new URLSearchParams(location.search).get('s'),boxes=f.querySelectorAll('input[name=service]');
+  if(s&&map[s]!==undefined)boxes[map[s]].checked=true;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=[].slice.call(f.querySelectorAll('[required]')).filter(function(el){return el.type==='checkbox'?!el.checked:!el.value.trim()||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))});
+    f.querySelectorAll('[required]').forEach(function(el){el.style.borderColor=''});
+    if(bad.length){bad.forEach(function(el){el.style.borderColor='var(--hp)'});bad[0].focus();alertBox('必須の項目を確認してください');return}
+    var d=new FormData(f),body=new URLSearchParams();
+    d.forEach(function(v,k){if(k!=='service')body.append(k,v)});
+    body.append('service',d.getAll('service').join('、'));
+    btn.disabled=true;btn.textContent='送信中…';
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:body}).then(function(){
+      f.style.display='none';document.getElementById('ok').style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+    }).catch(function(){
+      document.getElementById('ng').style.display='block';btn.disabled=false;btn.textContent='送信する';
+    });
+  });
+  function alertBox(t){var n=document.getElementById('ng');n.querySelector('h2').textContent=t;n.querySelector('p').textContent='赤くなった項目を入力してください。';n.style.display='block';setTimeout(function(){n.style.display='none';n.querySelector('h2').textContent='送信できませんでした'},4000)}
+})();
+</script>
+</body>
+</html>
