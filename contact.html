@@ -51,7 +51,9 @@
 .alt a{display:grid;gap:2px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
 .alt b{font-size:.92rem}.alt span{font-size:.8rem;color:var(--muted)}
 </style>
-<!--GA-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGD4G7DNEV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DGD4G7DNEV');</script>
 </head>
 <body data-page="contact">
 <div id="hd"></div>
@@ -119,7 +121,7 @@ var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwYuss7UibtUjlcGMIymP9cp
     body.append('service',d.getAll('service').join('、'));
     btn.disabled=true;btn.textContent='送信中…';
     fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:body}).then(function(){
-      f.style.display='none';document.getElementById('ok').style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+      f.style.display='none';document.getElementById('ok').style.display='block';if(window.gtag)gtag('event','generate_lead',{form:'contact',service:d.getAll('service').join('/')});window.scrollTo({top:0,behavior:'smooth'});
     }).catch(function(){
       document.getElementById('ng').style.display='block';btn.disabled=false;btn.textContent='送信する';
     });

@@ -35,6 +35,7 @@
   if(cp)cp.addEventListener('click',function(){var el=document.getElementById('mail');
     function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='選択しました。長押しでコピー'}
     try{navigator.clipboard.writeText(el.textContent).then(function(){cp.textContent='コピーしました'},sel)}catch(e){sel()}});
+  document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a||!window.gtag)return;if(/line\.me/.test(a.href))gtag('event','line_click',{page:page});else if(/^mailto:/.test(a.href))gtag('event','mail_click',{page:page});});
   var rv=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(el){io.observe(el)})}
   else rv.forEach(function(el){el.classList.add('on')});
