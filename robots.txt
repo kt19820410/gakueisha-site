@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /prompts.html
+
+Sitemap: https://gakueisha.jp/sitemap.xml

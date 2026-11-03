@@ -19,7 +19,7 @@
   }
   var ft=document.getElementById('ft');
   if(ft){
-    ft.outerHTML='<footer><div class="wrap"><b>株式会社学栄社</b><nav><a href="index.html">トップ</a>'+nav.map(function(n){return '<a href="'+n[0]+'">'+n[1]+'</a>'}).join('')+'</nav><span>表示価格はすべて税抜です。</span><span>© Gakueisha Inc.</span></div></footer>';
+    ft.outerHTML='<footer><div class="wrap"><b>株式会社学栄社</b><nav><a href="index.html">トップ</a>'+nav.map(function(n){return '<a href="'+n[0]+'">'+n[1]+'</a>'}).join('')+'<a href="column.html">コラム</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></nav><span>表示価格はすべて税抜です。</span><span>© Gakueisha Inc.</span></div></footer>';
   }
   if(['hp','ast','spp','con'].indexOf(page)>-1){
     var fb=document.createElement('div');fb.className='fixbar';
