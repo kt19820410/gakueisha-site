@@ -3,7 +3,7 @@
   var nav=[['hp.html','HP制作','var(--hp)','hp'],['ast.html','AST（時間割作成）','var(--ast)','ast'],['spp.html','SPP（学習計画作成）','var(--spp)','spp'],['consult.html','経営コンサル','var(--con)','con']];
   var hd=document.getElementById('hd');
   if(hd){
-    hd.outerHTML='<header class="top"><div class="wrap"><a class="logo" href="index.html"><span class="mk">学</span><span><b>株式会社学栄社</b><small>学習塾のための4つのサービス</small></span></a>'+
+    hd.outerHTML='<header class="top"><div class="wrap"><a class="logo" href="./"><span class="mk">学</span><span><b>株式会社学栄社</b><small>学習塾のための4つのサービス</small></span></a>'+
     '<button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false"><span></span></button>'+
     '<nav class="gnav">'+nav.map(function(n){return '<a href="'+n[0]+'"'+(n[3]===page?' aria-current="page"':'')+'><i style="background:'+n[2]+'"></i>'+n[1]+'</a>'}).join('')+
     '<a class="cta" href="contact.html">お問い合わせ</a></nav></div></header>';
@@ -19,7 +19,7 @@
   }
   var ft=document.getElementById('ft');
   if(ft){
-    ft.outerHTML='<footer><div class="wrap"><b>株式会社学栄社</b><nav><a href="index.html">トップ</a>'+nav.map(function(n){return '<a href="'+n[0]+'">'+n[1]+'</a>'}).join('')+'<a href="column.html">コラム</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></nav><span>表示価格はすべて税抜です。</span><span>© Gakueisha Inc.</span></div></footer>';
+    ft.outerHTML='<footer><div class="wrap"><b>株式会社学栄社</b><nav><a href="./">トップ</a>'+nav.map(function(n){return '<a href="'+n[0]+'">'+n[1]+'</a>'}).join('')+'<a href="column.html">コラム</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></nav><span>表示価格はすべて税抜です。</span><span>© Gakueisha Inc.</span></div></footer>';
   }
   if(['hp','ast','spp','con'].indexOf(page)>-1){
     var fb=document.createElement('div');fb.className='fixbar';
